@@ -1,0 +1,25 @@
+{
+  "name": "rid222165_desafio02",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write \"**/*.{html,css,js}\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ovidiojcf/RID222165_Desafio02.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Ovidiojcf/RID222165_Desafio02/issues"
+  },
+  "homepage": "https://github.com/Ovidiojcf/RID222165_Desafio02#readme",
+  "devDependencies": {
+    "prettier": "^3.6.2"
+  }
+}
