@@ -1,97 +1,103 @@
 <!doctype html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lusitana:wght@400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik&display=swap"
-      rel="stylesheet"
-    />
-    <title>The Dev News</title>
-  </head>
 
-  <body>
-    <header class="navbar-blue">
-      <div class="container">
-        <h1 class="text-white">The Dev News</h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lusitana:wght@400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik&display=swap"
+    rel="stylesheet" />
+  <title>The Dev News</title>
+</head>
+
+<body>
+  <header class="navbar-blue">
+    <div class="container">
+      <h1 class="text-white">The Dev News</h1>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+      <div class="main-grid">
+        <div>
+          <div id="hero">
+            <p class="text-white">opinião</p>
+            <h1 class="text-white">Como é ser um desenvolvedor</h1>
+            <p class="text-white"><b>By</b> Fabio Tetsuo</p>
+          </div>
+          <div class="header-posts text-white">
+            <h2>Posts mais recentes</h2>
+            <p>Ver todos</p>
+          </div>
+          <div id="posts-container"></div>
+        </div>
+
+        <div>
+          <div class="header-posts text-white">
+            <h2>Posts Populares</h2>
+          </div>
+          <div id="popular-posts-container"></div>
+
+          <div class="header-posts text-white">
+            <h2>Categorias</h2>
+          </div>
+        </div>
       </div>
-    </header>
-    <main>
-      <div class="container">
-        <div id="hero">
-          <p class="text-white">opinião</p>
-          <h1 class="text-white">Como é ser um desenvolvedor</h1>
-          <p class="text-white"><b>By</b> Fabio Tetsuo</p>
-        </div>
-        <div class="header-posts text-white">
-          <h2>Posts mais recentes</h2>
-          <p>Ver todos</p>
-        </div>
+    </div>
+  </main>
+  <footer class="foooter-blue">
+    <div class="container">
+      <p>Copyright@The Dev News</p>
+    </div>
+  </footer>
 
-        <div id="posts-container"></div>
+  <script>
+    const posts = [
+      {
+        img: "assets/article-one.jpg",
+        categoria: "desenvolvimento",
+        titulo: "Desenvolvimento mobile",
+        autor: "Fabio Tetsuo",
+        paragrafo:
+          "Lorem ipsum dolor sit amet consectetur. In vitae urna commodo amet congue integer dapibus. Interdum semper mauris convallis fusce enim odio. Vitae montes ridiculus felis.",
+        data: "22 Agosto 2022",
+      },
+      {
+        img: "assets/article-two.jpg",
+        categoria: "saude",
+        titulo: "Balancear a vida profissional e pessoal",
+        autor: "Ridho Satriawan",
+        paragrafo:
+          "Lorem ipsum dolor sit amet consectetur. Et consectetur at consectetur sed nisl tempor.",
+        data: "22 Agosto 2022",
+      },
+      {
+        img: "assets/article-three.jpg",
+        categoria: "desenvolvimento",
+        titulo: "Configurando VSCode",
+        autor: "Fabio Tetsuo",
+        paragrafo:
+          "Lorem ipsum dolor sit amet consectetur. Erat interdum tortor ac sagittis id a etiam. Tellus vitae arcu dignissim massa aliquam vel tellus. Ipsum massa arcu nulla sed purus in ac.",
+        data: "22 Agosto 2022",
+      },
+      {
+        img: "assets/article-four.jpg",
+        categoria: "produtividade",
+        titulo: "2 monitores ou 1 ultrawide?",
+        autor: "Fulano da Silva",
+        paragrafo:
+          "Lorem ipsum dolor sit amet consectetur. Arcu tellus adipiscing sagittis tristique. Eget molestie posuere enim pretium venenatis nunc ligula donec a. Velit senectus amet nulla.",
+        data: "22 Agosto 2022",
+      },
+    ];
 
-        <div class="header-posts text-white">
-          <h2>Posts Populares</h2>
-        </div>
+    const container = document.getElementById("posts-container");
 
-        <div class="header-posts text-white">
-          <h2>Categorias</h2>
-        </div>
-      </div>
-    </main>
-    <footer class="foooter-blue">
-      <div class="container">
-        <p>Copyright@The Dev News</p>
-      </div>
-    </footer>
-
-    <script>
-      const posts = [
-        {
-          img: "assets/article-one.jpg",
-          categoria: "desenvolvimento",
-          titulo: "Desenvolvimento mobile",
-          autor: "Fabio Tetsuo",
-          paragrafo:
-            "Lorem ipsum dolor sit amet consectetur. In vitae urna commodo amet congue integer dapibus. Interdum semper mauris convallis fusce enim odio. Vitae montes ridiculus felis.",
-          data: "22 Agosto 2022",
-        },
-        {
-          img: "assets/article-two.jpg",
-          categoria: "saude",
-          titulo: "Balancear a vida profissional e pessoal",
-          autor: "Ridho Satriawan",
-          paragrafo:
-            "Lorem ipsum dolor sit amet consectetur. Et consectetur at consectetur sed nisl tempor.",
-          data: "22 Agosto 2022",
-        },
-        {
-          img: "assets/article-three.jpg",
-          categoria: "desenvolvimento",
-          titulo: "Configurando VSCode",
-          autor: "Fabio Tetsuo",
-          paragrafo:
-            "Lorem ipsum dolor sit amet consectetur. Erat interdum tortor ac sagittis id a etiam. Tellus vitae arcu dignissim massa aliquam vel tellus. Ipsum massa arcu nulla sed purus in ac.",
-          data: "22 Agosto 2022",
-        },
-        {
-          img: "assets/article-four.jpg",
-          categoria: "produtividade",
-          titulo: "2 monitores ou 1 ultrawide?",
-          autor: "Fulano da Silva",
-          paragrafo:
-            "Lorem ipsum dolor sit amet consectetur. Arcu tellus adipiscing sagittis tristique. Eget molestie posuere enim pretium venenatis nunc ligula donec a. Velit senectus amet nulla.",
-          data: "22 Agosto 2022",
-        },
-      ];
-
-      const container = document.getElementById("posts-container");
-
-      posts.forEach((post) => {
-        const postHTML = `
+    posts.forEach((post) => {
+      const postHTML = `
       <article class="post">
         <img src="${post.img}" alt="${post.titulo}" />
         <div class="post-content">
@@ -103,28 +109,44 @@
         </div>
       </article>
     `;
-        container.innerHTML += postHTML;
-      });
+      container.innerHTML += postHTML;
+    });
 
+    const popularPosts = [
+      {
+        img: "assets/popularPost1.jpg",
+        titulo: "Desenvolvimento Pessoal",
+        data: "22 Agosto 2022",
+      },
+      {
+        img: "assets/popularPost2.jpg",
+        titulo: "GitLab vs GitHub",
+        data: "22 Agosto 2022",
+      },
+      {
+        img: "assets/popularPost3.jpg",
+        titulo: "Café atrapalha?",
+        data: "22 Agosto 2022",
+      },
+    ];
 
-      const popularPosts = [
-        {
-          img: "assets/popularPost1.jpg",
-          titulo: "Desenvolvimento Pessoal",
-          data: "22 Agosto 2022",
-        },
-        {
-          img: "assets/popularPost2.jpg",
-          titulo: "GitLab vs GitHub",
-          data: "22 Agosto 2022",
-        },
-        {
-          img: "assets/popularPost3.jpg",
-          titulo: "Café atrapalha?",
-          data: "22 Agosto 2022",
-        },
-      ]
+    const popularContainer = document.getElementById(
+      "popular-posts-container"
+    );
 
-    </script>
-  </body>
+    popularPosts.forEach((post) => {
+      const postHTML = `
+    <article class="post-popular">
+      <img src="${post.img}" alt="${post.titulo}" />
+      <div class="post-popular-content">
+        <h3>${post.titulo}</h3>
+        <p class="text-gray">${post.data}</p>
+      </div>
+    </article>
+  `;
+      popularContainer.innerHTML += postHTML;
+    });
+  </script>
+</body>
+
 </html>
