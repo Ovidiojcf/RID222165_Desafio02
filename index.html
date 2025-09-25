@@ -22,7 +22,7 @@
   <main>
     <div class="container">
       <div class="main-grid">
-        <div>
+        <div class="main-content">
           <div id="hero">
             <p class="text-white">opinião</p>
             <h1 class="text-white">Como é ser um desenvolvedor</h1>
@@ -35,7 +35,7 @@
           <div id="posts-container"></div>
         </div>
 
-        <div>
+        <div class="main-content">
           <div class="header-posts text-white">
             <h2>Posts Populares</h2>
           </div>
@@ -44,6 +44,7 @@
           <div class="header-posts text-white">
             <h2>Categorias</h2>
           </div>
+          <div id="categories-container"></div>
         </div>
       </div>
     </div>
@@ -139,13 +140,45 @@
     <article class="post-popular">
       <img src="${post.img}" alt="${post.titulo}" />
       <div class="post-popular-content">
-        <h3>${post.titulo}</h3>
+        <h4>${post.titulo}</h4>
         <p class="text-gray">${post.data}</p>
       </div>
     </article>
   `;
       popularContainer.innerHTML += postHTML;
     });
+
+
+    const categorias = [
+      {
+        namme: "Desenvolvimento",
+        posts: 1,
+      },
+      {
+        namme: "Saúde",
+        posts: 2,
+      },
+      {
+        namme: "Produtividade",
+        posts: 2,
+      },
+      {
+        namme: "Opinião",
+        posts: 1,
+      },
+    ];
+
+    const categoriasContainer = document.getElementById("categories-container");
+    categorias.forEach((categoria) => {
+      const categoriaHTML = `
+    <div class="category">
+      <h3 class="text-gray">> ${categoria.namme}</h3>
+      <h3 class="text-gray">(${categoria.posts}) </h3>
+    </div>
+  `;
+      categoriasContainer.innerHTML += categoriaHTML;
+    });
+
   </script>
 </body>
 
